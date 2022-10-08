@@ -59,10 +59,14 @@ fn main() {
 
     println!("\nEnd count = {count}");
 
+    // recursive fibonacci implementation in Rust
+
     let num = 6;
     let fib = fibonacci(num);
 
     println!("fibonacci sequence of {num} = {fib}");
+
+    // self-made Twelve Days of Christmas jingle (half-baked atm)
 
     twelve_days_of_christmas();
 

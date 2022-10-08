@@ -1,6 +1,16 @@
 # Chapter 3: Common Programming Concepts
 
-## Variables
+##### TABLE OF CONTENTS
+1. [Variables](#variables)
+2. [Data Types](#data-types)
+3. [Functions](#functions)
+4. [Comments](#comments)
+5. [Control Flow](#control-flow)
+6. [Repetition with Loops](#repetition-with-loops)
+
+#### [code](src/main.rs)
+
+## [Variables](#table-of-contents)
 By default, variables in Rust are immutable (unchanging). You _can_ make Rust variables mutable, and that can be done by the following code:
 ```rust
 let mut x = 5;
@@ -47,7 +57,7 @@ The value of x is: 6
 
 Shadowing is different from making a variable mutable (changing) because a compile-time error is done when accidentally reassigning an immutable variable without the `let` keyword. Another difference between the two is that, with shadowing, a "new variable" is created when using `let`, which can allow a variable to change its type while reusing the same name.
 
-## Data Types
+## [Data Types](#table-of-contents)
 
 All values in Rust has some sort of data type. Two data type subsets for Rust exists: scalar and compound. Rust is a _statically typed_ language, which means that it has to know all variable types at compile time.
 
@@ -221,7 +231,7 @@ When attempting to access an element using indexing, Rust will check that the in
 
 This example is one of Rust's safety principles in action. In many low-level languages, this check isn't done; usually when providing an incorrect index, invalid memory can be accessed. Rust protects against this kind of error by immediately exiting instead of allowing the memory access and continuing.
 
-## Functions
+## [Functions](#table-of-contents)
 
 For writing functions, Rust uses _snake case_ for function and variable names (all letters are lowercase, underscores between words). 
 
@@ -302,7 +312,7 @@ fn five() -> i32 {
 
 In the `five()` function, there are no function calls, macros, or `let` statements; just the number `5` without a semicolon. This is a valid function in Rust.
 
-## Comments
+## [Comments](#table-of-contents)
 
 Comments in Rust (not documentation comments) are very simple. They can be done with the `//` characters, and can be used as shown below:
 ```rust
@@ -324,7 +334,7 @@ fn main() {
 }
 ```
 
-## Control Flow
+## [Control Flow](#table-of-contents)
 
 If, else, it's been seen across many different programming languages. It basically helps determine if some code should be run or not, either in a loop or not at all.
 
@@ -422,7 +432,7 @@ error: could not compile `branches` due to previous error
 
 The expression in the `if` block evaluates to an integer, but the `else` block expression evaluates to a string. This doesn't work because variables must have a single type, and Rust needs to know at compile time what type the `number` variable is. Knowing the type of `number` lets the compiler verify the type is valid everywhere in the code that `number` is used. Rust can't do this if `number` is determined only at runtime; the compiler would be more complex and make fewer guarantees about the code if it had to figure out multiple hypothetical types for a variable.
 
-## Repetition with loops
+## [Repetition with loops](#table-of-contents)
 
 Loops. When repeating the same thing over and over again is necessary. 
 
@@ -550,3 +560,5 @@ fn main() {
     println!("LIFTOFF!!!");
 }
 ```
+
+##### [back to parent readme](../README.md)
