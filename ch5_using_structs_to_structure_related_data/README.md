@@ -4,6 +4,7 @@ NOTE: Contents of this README are abridged; see [main.rs](src/main.rs) for this 
 
 ##### TABLE OF CONTENTS
 1. [Where's the -> Operator?](#wheres-the---operator)
+2. [Summary](#summary)
 
 ## [Where's the -> Operator?](#table-of-contents)
 
@@ -35,3 +36,5 @@ kept connected to each other and name each piece for clear code. In `impl` block
 with the struct, and methods are a kind of associated function that can specify the behavior that struct instances have.
 
 Structs aren't the only means of creating custom types: `enum`s are another way (see chapter 6).
+
+##### [back to parent readme](../README.md)
