@@ -7,3 +7,4 @@ Contents are from The Rust Programming Language 2018 book from no starch press. 
 # [CHAPTER 3: COMMON PROGRAMMING CONCEPTS](ch3_common_programming_concepts/README.md)
 # [CHAPTER 4: UNDERSTANDING OWNERSHIP](ch4_understanding_ownership/README.md)
 # [CHAPTER 5: USING STRUCTS TO STRUCTURE RELATED DATA](ch5_using_structs_to_structure_related_data/README.md)
+# [CHAPTER 6: ENUMS AND PATTERN MATCHING](ch6_enums_and_pattern_matching/README.md)

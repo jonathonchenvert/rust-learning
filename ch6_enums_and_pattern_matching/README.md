@@ -191,7 +191,7 @@ variant of the `Option` enum can hold one piece of data of any type, and that ea
 overall `Option<T>` type a different type. Some examples are below:
 ```rust
 let some_number = Some(5);:
-```rust
+
 let x: i8 = 5;
 let y: Option<i8> = Some(5);
 
@@ -201,7 +201,7 @@ let sum = x + y;
 If this is attempted to be run, the error message below appears:
 ```bash
 $ cargo run
-   Compiling ch6_enums_and_pattern_matching v0.1.0 (/home/jchenvert/development/rust-learning/ch6_enums_and_pattern_matching)
+   Compiling ch6_enums_and_pattern_matching v0.1.0 (/home/me/development/rust-learning/ch6_enums_and_pattern_matching)
 error[E0277]: cannot add `Option<i8>` to `i8`
   --> src/main.rs:30:17
    |
@@ -228,7 +228,7 @@ the value.
 In other words, `Option<T>` has to be converted to a `T` before performing `T` operations with it. Generally, this helps catch one of the most
 common issues with null: assuming that something isn't null when it actually is.
 
-Eliminating the risk of incorrectly assuming a not-null value helps to be more confident in the written code. In order ot have a value
+Eliminating the risk of incorrectly assuming a not-null value helps to be more confident in the written code. In order to have a value
 that can possibly be null, it must be explicitly opted in by making the type of that value `Option<T>`. Then, when that value is used, it's 
 required to explicitly handle the case when the value is null. Everywhere that a value has a type that isn't an `Option<T>` _can_ safely be assumed
 that the value isn't null. This was a deliberate design decision for Rust to limit null's pervasiveness and increase the safety of Rust code.
@@ -277,7 +277,7 @@ The `match` keyword is followed by an expression (in this case, the `coin` value
 with `if`, the condition needs to evaluate to a Boolean value, but here it can be any type. The type of `coin` in this example is the `Coin` enum.
 
 Next is the `match` arms, which has two parts: a pattern and some code. The first arm has a pattern that is the value of `Coin::Penny`, and the `=>` 
-operator tgat separates the pattern and the code to run. In this case, the code is just the value 1. Each arm is separated from the next with a comma.
+operator that separates the pattern and the code to run. In this case, the code is just the value 1. Each arm is separated from the next with a comma.
 
 When the `match` expression executes, it compares the resultant value against the pattern of each arm in order. If a pattern matches the value, the code
 associated with that pattern is executed. If it doesn't match, execution continues to the next arm. `match` expressions can have as many values as possible.
@@ -371,7 +371,7 @@ The `i` binds to the value contained in `Some`, so `i` takes the value `5`. 1 is
 `6` inside.
 
 Combining `match` and enums is useful in many situations. This pattern is seen a lot in Rust code: `match` against an `enum`, bind a variable to
-the data inside, and then execute code based on it. It's a bit tricky at first, but can eventually get used to.
+the data inside, and then execute code based on it. It's a bit tricky at first, but developers will eventually get used to.
 
 ### [Matches Are Exhaustive](#table-of-contents)
 
@@ -431,7 +431,7 @@ fn remove_fancy_hat() {}
 fn move_player(num_spaces: u8) {}
 ```
 
-For the first two arms, tha patterns are the literal values `3` and `7`. The last arm that covers every possible value was chosen to be
+For the first two arms, the patterns are the literal values `3` and `7`. The last arm that covers every possible value was chosen to be
 named `other`. The code that runs for the `other` arm uses the variable by passing it to the `move_player` function.
 
 The code compiles, even though it hasn't been listed with all the possible values a `u8` can have, because the last pattern will match all 
@@ -511,7 +511,7 @@ given to the `match` and the pattern is its first arm. In this case, the pattern
 doesn't match the pattern.
 
 Using `if let` means less typing, less indentation, and less boilerplate code. However, this loses out on the exhaustive checking that `match` enforces.
-Choosing betwen `match` and `if let` depends on that's being done in code and whether gaining conciseness is an appropriate trade-off for losing exhaustive
+Choosing between `match` and `if let` depends on what's being done in code and whether gaining conciseness is an appropriate trade-off for losing exhaustive
 checking. The `if let` syntax can be thought of as a simpler (and cleaner) version of `match` that runs code when the value matches one pattern and then
 ignores all other values.
 

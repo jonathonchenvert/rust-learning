@@ -32,7 +32,7 @@ Methods are defined within the context of a struct, enum, or trait
 everything in the impl block will be associated with the Rectangle struct
 
 Getter methods are not implemented automatically for structs like other languages might do
-Getters can be useeful for making fields private but methods public (read-only) (i.e. width())
+Getters can be useful for making fields private but methods public (read-only) (i.e. width())
 
 All functions in `impl` blocks are called associated functions because they're associated with the type
 named after the `impl`. Associated functions can be defined that don't have a `self` as the first parameter
@@ -120,7 +120,7 @@ fn main() {
     // The :? inside the curly brackets tells println! to use an output format called Debug
     // Useful for printing out structs in a way that's useful for developers
     // :#? is prettified debug output
-    println!("rect1 is {:#?}", rect1); // won't print unless std::fmt::Display is implemented for Rectangle
+    println!("rect1 is:\n{:#?}", rect1); // won't print unless std::fmt::Display is implemented for Rectangle
 
     // let width1 = 30;
     // let height1 = 50;

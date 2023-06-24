@@ -18,8 +18,8 @@ enum IpAddressKind {
 
 fn main() {
     // Note: Enum variants are namespaced under its identifier, using a double colon to separate the two
-    let four = IpAddressKind::V4;
-    let six  = IpAddressKind::V6;
+    let four: IpAddressKind = IpAddressKind::V4;
+    let six: IpAddressKind  = IpAddressKind::V6;
 
     // route(IpAddressKind::V4);
     // route(IpAddressKind::V6);
